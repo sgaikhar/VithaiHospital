@@ -520,6 +520,20 @@
         document.addEventListener('DOMContentLoaded', () => {
             showPage('home-page', document.querySelector('nav ul li:first-child a'));
         });
+		// Example of a correct handler that ignores 'tel:' links
+$('a').on('click', function(e) {
+  var href = $(this).attr('href');
+  
+  // If the link starts with 'tel:', let the browser handle it normally.
+  if (href && href.startsWith('tel:')) {
+    return; // Do nothing, let the link proceed
+  }
+  
+  // For all other links, maybe you want to stop the action for tracking or routing
+  // e.preventDefault(); 
+  
+  // ... your other code ...
+});
     </script>
 </head>
 <body>
@@ -541,8 +555,8 @@
             </div>
 			    <div class="contact-float">
         <h4>📞 Need Emergency Care?</h4>
-        <a href="+91 9766822460">📱 +91 9766822460</a>
-        <a href="+91 9860702464">📱 +91 9860702464</a>
+        <a href="tel:+91 9766822460">📱 +91 9766822460</a>
+        <a href="tel:+91 9860702464">📱 +91 9860702464</a>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">Available 24/7 for Emergency</p>
    </div>
         </div>
@@ -563,7 +577,7 @@
         <section id="home-page" class="page active">
             
             <div class="emergency-banner">
-                <i class="fa-solid fa-heart-pulse"></i> 24/7 Emergency Services Available - Call: +91 9766822460
+                <i class="fa-solid fa-heart-pulse"></i>24/7 Emergency Services Available - Call: <a href="tel:+91 9766822460">+91 9766822460</a>
             </div>
 
             <div class="hero">
@@ -754,7 +768,7 @@
             <div class="footer-column">
                 <h4>Contact & Help</h4>
                 <p>2252/82, Shivkalyan Nagar, Loha</p>
-                <p>+91 9766822460</p>
+                <a href="tel:+91 9766822460">📱 +91 9766822460</a>
                 <a href="#contact-page" onclick="showPage('contact-page', this)">Book Appointment</a>
             </div>
         </div>
