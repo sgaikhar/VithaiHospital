@@ -523,6 +523,21 @@
             font-size: 1rem;
             cursor: pointer;
         }
+		.map-responsive {
+    overflow: hidden;
+    padding-bottom: 75%; /* Sets a 4:3 aspect ratio (450px height / 600px width = 0.75 or 75%) */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0; /* Ensures the border style from the HTML is respected */
+}
       </style>
       <script>
          function showPage(pageId, element) {
@@ -843,8 +858,10 @@
                </div>
                <section class="map-container">
                   <h2>Our Location</h2>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6617839234914!2d77.1165402!3d18.9463589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcfd300141eb1c5%3A0x75fae78886fbe3f3!2sVithai%20Hospital%20and%20Critical%20Care%20Center!5e0!3m2!1sen!2sau!4v1764125582471!5m2!1sen!2sau" width="1000" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+				  <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6617839234914!2d77.1165402!3d18.9463589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcfd300141eb1c5%3A0x75fae78886fbe3f3!2sVithai%20Hospital%20and%20Critical%20Care%20Center!5e0!3m2!1sen!2sau!4v1764125582471!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                   </iframe>
+				  </div>
                   <p>
                      <a href="https://maps.app.goo.gl/xuHE7mUC5q1RdLna6" target="_blank">Click here to view Vithai Hospital on Google Maps</a>
                   </p>
@@ -887,8 +904,10 @@
                </div>
                <section class="map-container">
                   <h2>Our Location</h2>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6617839234914!2d77.1165402!3d18.9463589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcfd300141eb1c5%3A0x75fae78886fbe3f3!2sVithai%20Hospital%20and%20Critical%20Care%20Center!5e0!3m2!1sen!2sau!4v1764125582471!5m2!1sen!2sau" width="1000" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+				  <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.6617839234914!2d77.1165402!3d18.9463589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcfd300141eb1c5%3A0x75fae78886fbe3f3!2sVithai%20Hospital%20and%20Critical%20Care%20Center!5e0!3m2!1sen!2sau!4v1764125582471!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                   </iframe>
+				  </div>
                   <p>
                      <a href="https://maps.app.goo.gl/xuHE7mUC5q1RdLna6" target="_blank">Click here to view Vithai Hospital on Google Maps</a>
                   </p>
