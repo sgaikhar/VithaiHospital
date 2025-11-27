@@ -547,6 +547,41 @@
         height: auto !important;     
     }
 }
+/* --- Media Query for Mobile Devices --- */
+@media (max-width: 600px) {
+    /* 1. Hide Separators and Language Switcher */
+    .top-bar .separator {
+        display: none; /* Hides the vertical bars */
+    }
+
+    #language-switcher {
+        display: none; /* Hides the language selection to save space */
+    }
+
+    /* 2. Change the layout to stack items vertically */
+    .top-bar {
+        /*
+        * Sets the container to use flexbox (if not already set)
+        * and allows items to wrap to the next line.
+        */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center items when they wrap */
+        padding: 5px 10px; /* Add slight padding around the edge */
+    }
+
+    /* 3. Give each item 100% width so they stack */
+    .top-bar-item {
+        width: 100%; /* Makes each address/phone item take up the full width */
+        text-align: center; /* Centers the text within the item */
+        margin: 3px 0; /* Add a little vertical spacing between stacked items */
+    }
+
+    /* 4. Adjustments for the Call Us item */
+    .top-bar-item .label {
+        display: block; /* Forces the label onto its own line */
+    }
+}
       </style>
       <script>
          function showPage(pageId, element) {
@@ -784,12 +819,13 @@
       <header>
 	        <div class="top-bar">
 			   <div id="language-switcher">
-                <span data-key="language_select">Language:</span>
-                <select id="language-select">
-                    <option value="en">English</option>
-                    <option value="mr">मराठी (Marathi)</option>
-                </select>
-            </div>
+    <i class="fa-solid fa-globe"></i>
+    <span class="language-label" data-key="language_select">Language:</span>
+    <select id="language-select">
+        <option value="en">English</option>
+        <option value="mr">मराठी (Marathi)</option>
+    </select>
+</div>
 			<div class="separator">|</div>
             <div class="top-bar-item">
                <span class="material-icons" style="color: #EA4335; font-size: 20px; vertical-align: middle; margin-right: 5px;">
