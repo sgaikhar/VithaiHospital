@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # 1. Ignore if request is for a real file
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # 2. Ignore if request is for a real directory
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # 3. For all other requests, load index.html
+  RewriteRule . /index.html [L]
+</IfModule>
