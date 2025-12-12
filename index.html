@@ -935,34 +935,38 @@
    <body>
       <hr>
  <header>
-    <div class="top-bar"> 
-       	<div class="top-bar-item language-switcher-block">
-            <div id="language-switcher" aria-label="Language switcher">
-                <i class="fa-solid fa-globe"></i>
-                <span for="language-label" id="language-label" class="label">Language:</span>
-                <select id="language-select" onchange="onLanguageChange()">
-                    <option value="mr">मराठी (Marathi)</option>
-                    <option value="en">English</option>
-                </select>
+         <div class="top-bar">
+             <!-- Language switcher on the top bar -->
+            <div class="top-bar-item">
+               <span class="material-icons" style="color: #EA4335; font-size: 20px; vertical-align: middle; margin-right: 5px;">
+               pin_drop
+               </span>
+                  <span id="top-address-label" class="label"><strong>Our Address :</strong></span>
+                  <!-- Address text left unchanged (Option A) -->
+                  <span class="data"><a id="address" href="https://maps.app.goo.gl/xuHE7mUC5q1RdLna6" target="_blank"> 2282/53, New Sarafa Market, Shivkalyan Nagar, Loha</a></span>
             </div>
-        </div>
-		<div class="separator">|</div>
-        <div class="top-bar-item address-block">
-            <span class="material-icons address-icon">pin_drop</span>
-            <span id="top-address-label" class="label"><strong>Our Address :</strong></span>
-            <span class="data"><a id="address" href="https://maps.app.goo.gl/xuHE7mUC5q1RdLna6" target="_blank"> 2282/53, New Sarafa Market, Shivkalyan Nagar, Loha</a></span>
-        </div>
-        <div class="separator">|</div>
-        <div class="top-bar-item phone-block">
-            <span id="call-us-label" class="label"><strong> 📞 Call us on :</strong></span>
-            <div class="phone-numbers">
-                <a id="phone-1" href="tel:+919766822460">+91 9766822460</a>
-                <span class="separator">|</span>
-                <a id="phone-2" href="tel:+919860702464">+91 9860702464</a>
+			            <div class="separator">|</div>
+			            <div style="margin-left: 1rem; margin-right: 1rem;">
+                <div id="language-switcher" aria-label="Language switcher">
+					<i class="fa-solid fa-globe"></i>
+				<span for="language-label" id="language-label">Language:</span>
+                    <select id="language-select" onchange="onLanguageChange()">
+                        <option value="mr">मराठी (Marathi)</option>
+						<option value="en">English</option>
+                    </select>
+                </div>
             </div>
-        </div>
-    </div>
-</header>
+            <div class="separator">|</div>
+            <div class="top-bar-item">
+               <span id="call-us-label" class="label"><strong> 📞 Call us on :</strong></span>
+               <div style="display:flex; gap:8px; align-items:center;">
+                   <a id="phone-1" href="tel:+919766822460">+91 9766822460</a>
+                   <span color="black" class="separator">|</span>
+                   <a id="phone-2" href="tel:+919860702464">+91 9860702464</a>
+               </div>
+            </div>
+         </div>
+      </header>
 
       <div class="header-top">
          <div class="logo-container">
@@ -1097,7 +1101,7 @@
                      <p style="margin-top: 1rem; color: var(--text-light);">
                      <li id="ourdoctors-t1-rk">Bhaghvati Multispeciality Hospital, Nanded</li>
                      <li id="ourdoctors-t2-rk">🧑‍⚕️ Doctor's Visit Schedule <br>
-                        Every 2nd Saturday of the month: 11:00 AM – 12:00 PM</strong>.
+                        Every 2nd Saturday of the month: 11:00 AM – 12:00 PM.
                      </li>
                      </p>
                      <ul class="qualifications">
