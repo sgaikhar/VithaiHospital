@@ -298,23 +298,37 @@
          font-weight: 700;
          box-shadow: 0 4px 15px rgba(245, 87, 108, 0.5);
          }
-         /* --- Floating Contact (Refined) --- */
         /* --- Floating Contact (Top-Left Position) --- */
+/* --- Floating Contact (Right Side, Vertically Centered) --- */
 .contact-float {
-    position: fixed; /* Pins to the browser viewport */
-    top: 10px;       /* 10px from the top edge */
-    left: 10px;      /* 10px from the left edge */
-    /* right: 10px; <--- NO LONGER NEEDED */
+    /* CRITICAL: Pins the box relative to the browser window */
+    position: fixed; 
+    
+    /* Pushes the box to the right edge, 10px spacing */
+    right: 10px; 
+    
+    /* Sets the top edge of the box to 50% down the viewport */
+    top: 50%; 
+    
+    /* CRITICAL FOR CENTER: Pulls the box up by half its own height, achieving perfect vertical centering */
+    transform: translateY(-50%); 
+    
+    /* Remove the conflicting 'left' property if you added it previously */
+    /* left: 10px; <--- REMOVE OR COMMENT OUT */
     
     color: black;
     padding: 0.01rem 0.1rem;
     border-radius: 14px;
     box-shadow: var(--shadow-deep);
-    z-index: 1;
+    z-index: 1000; /* Use a high z-index to ensure it stays on top */
     width: 230px;
     transition: all 1s ease-out;
+    
+    /* Ensure background is set if you want the box to stand out */
+    /* background-color: white; */ 
 }
-/* ... rest of your styles ... */
+
+/* ... rest of your styles for h4, p, a ... */
          /* --- Footer --- */
          footer {
          background: var(--primary-blue);
