@@ -608,7 +608,93 @@
     /* Ensures the QR code stays put on the right */
     flex-shrink: 0;
 }
-      </style>
+<style>
+/* --- 1. Base Styles (Desktop Layout) --- */
+.top-bar {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Space items out */
+    align-items: center; /* Vertically center items */
+    padding: 8px 15px;
+    background-color: #f0f0f0; /* Example background color */
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    font-size: 0.9em;
+}
+
+.top-bar-item {
+    display: flex;
+    align-items: center;
+    /* Use a gap for internal spacing */
+    gap: 10px; 
+}
+
+/* Style for the address icon */
+.address-icon {
+    color: #EA4335;
+    font-size: 20px;
+}
+
+/* Hide separators on mobile, only show on desktop where needed */
+.separator {
+    color: black;
+    padding: 0 5px;
+}
+
+/* Adjust the phone number block to stack numbers if necessary */
+.phone-numbers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- 2. Mobile Responsiveness (Media Query) --- */
+/* Target screens smaller than 768px (common breakpoint for tablets/phones) */
+@media (max-width: 768px) {
+    .top-bar {
+        /* Force items to stack vertically */
+        flex-direction: column; 
+        
+        /* Align items to the left (more readable stack) */
+        align-items: flex-start; 
+        
+        /* Allow items to take full width */
+        width: 100%; 
+    }
+    
+    .top-bar-item {
+        /* Each stacked item takes the full width */
+        width: 100%; 
+        padding: 5px 0;
+        /* Ensure text and links are left-aligned */
+        justify-content: flex-start;
+    }
+    
+    /* Ensure the Language Switcher remains at the top and is left-aligned */
+    .language-switcher-block {
+        order: -1; /* Forces it to the very top */
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd; /* Visual separator */
+        margin-bottom: 5px;
+    }
+    
+    /* Stack phone numbers on smaller screens if necessary */
+    .phone-block .phone-numbers {
+        /* Change phone numbers to stack vertically if screen is very small, 
+           or keep them side-by-side but ensure the separator is manageable */
+        flex-wrap: wrap; 
+    }
+
+    /* Hide the visual separator (|) between phone numbers when stacked */
+    .phone-numbers .separator {
+        display: none;
+    }
+    
+    /* Add a small bottom margin to address/phone blocks for spacing */
+    .address-block, .phone-block {
+        margin-bottom: 5px;
+    }
+}
+</style>   
+   </style>
       <script>
          function showPage(pageId, element) {
              // Hide all pages
