@@ -300,11 +300,12 @@
          }
         /* --- Floating Contact (Top-Left Position) --- */
 
+
 .contact-float {
     /* Positioning */
     position: fixed; 
-    right: 1670px;       /* Pin to the right */
-    bottom: 910px;      /* Pin to the bottom (Best for mobile) */
+    right: 20px;       /* Pin to the right */
+    bottom: 20px;      /* Pin to the bottom (Best for mobile) */
     
     /* Ensure centering properties are removed if switching to bottom pin */
     top: auto;
@@ -1007,19 +1008,18 @@
    <body>
       <hr>
 	   <header>
-	            <div class="top-bar">
+	        <div class="top-bar">
              <!-- Language switcher on the top bar -->
-			 		 		 	  		 <div class="contact-float">
-			<div id="language-switcher" aria-label="Language switcher">
-					<i class="fa-solid fa-globe"></i>
-				<span for="language-label" id="language-label">Language:</span>
-                    <select id="language-select" onchange="onLanguageChange()">
-                        <option value="mr">मराठी (Marathi)</option>
-						<option value="en">English</option>
-                    </select>
-            </div>
-
-   </div>
+				<div class="contact-float">
+					<div id="language-switcher">
+						<i class="fa-solid fa-globe"></i>
+						<span for="language-label" id="language-label">Language:</span>
+							<select id="language-select" onchange="onLanguageChange()">
+								<option value="mr">मराठी (Marathi)</option>
+								<option value="en">English</option>
+							</select>
+					</div>
+				</div>
             <div class="top-bar-item">
                <span class="material-icons" style="color: #EA4335; font-size: 20px; vertical-align: middle; margin-right: 5px;">
                pin_drop
