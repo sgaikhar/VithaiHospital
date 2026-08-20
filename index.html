@@ -367,10 +367,41 @@ nav ul li a {
 
     transition: all 1s ease-out;
 }
+.insta-float {
+    /* Positioning */
+    position: fixed; 
+    right: 1040px;       /* Pin to the right */
+    bottom: 540px;      /* Pin to the bottom (Best for mobile) */
+    
+    /* Ensure centering properties are removed if switching to bottom pin */
+    top: auto;
+    transform: none;
+    
+    /* Visibility */
+    z-index: 9999; 
+    
+    /* Sizing (Use media query to manage width) */
+    width: auto; 
+    
+    /* ... rest of your styling ... */
+    color: black;
+    padding: 0.01rem 0.5rem;
+    border-radius: 14px;
+
+    transition: all 1s ease-out;
+}
 
 /* Optional: Make the box full-width on tiny screens for better readability */
 @media (max-width: 100%) {
     .contact-float {
+        width: 100%; /* Make it nearly full width */
+        left: 100%; /* Center it horizontally */
+        right: 100%;
+    }
+}
+/* Optional: Make the box full-width on tiny screens for better readability */
+@media (max-width: 100%) {
+    .insta-float {
         width: 100%; /* Make it nearly full width */
         left: 100%; /* Center it horizontally */
         right: 100%;
@@ -467,6 +498,16 @@ nav ul li a {
          margin-bottom: 5.5rem;
          }
          .contact-float {
+         position: fixed;
+         bottom: 100%;
+         top: auto;
+         right: 100%;
+         transform: translateX(50%);
+         max-width: 100%;
+         padding: 1rem;
+         text-align: center;
+         }
+		 .insta-float {
          position: fixed;
          bottom: 100%;
          top: auto;
@@ -705,6 +746,7 @@ nav ul li a {
 			"address": "2282/53, New Sarafa Market, Shivkalyan Nagar, Loha",
             "call-us-label": " 📞:",
             "language-label": "Language:",
+			"insta-label": "Insta Id:",
             "nav-home-text": "Home",
             "nav-services-text": "Services",
             "nav-doctors-text": "Our Doctors",
@@ -884,6 +926,7 @@ nav ul li a {
             "call-us-label": " 📞:",
 			"logo":"sadaf",
             "language-label": "भाषा:",
+			"insta-label": "इन्स्टा आयडी:",
             "nav-home-text": "मुख्यपृष्ठ",
             "nav-services-text": "उपलब्ध सेवा",
             "nav-doctors-text": "आमचे डॉक्टर",
@@ -1149,6 +1192,16 @@ function autoClose() {
 							</select>
 					</div>
 				</div>
+				<div class="insta-float">
+					<div style=" border-radius: 5px; padding: 8px;  text-align: center;">
+						<p>
+							<a href="https://instagram.com/dr_anujagaikhar_md" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #E1306C; font-weight: bold; font-size: 18px; display: inline-flex; align-items: center; gap: 8px;">
+								<i class="fa-brands fa-instagram" style="font-size: 20px;"></i>
+								<span>dr_anujagaikhar_md</span>
+							</a>
+						</p>
+					</div>
+				</div>
             <div class="top-bar-item">
                <span class="material-icons" style="color: #EA4335; font-size: auto; vertical-align: middle;">
                pin_drop
@@ -1161,11 +1214,18 @@ function autoClose() {
             <div class="top-bar-item">
                <span id="call-us-label" class="label"><strong>Call us on :</strong></span>
                <div style="display:flex; gap:8px; align-items:center;">
+					<a id="phone-1" href="tel:+912466 263875">+912466 263875</a>
+                   <span color="black" class="separator">|</span>
                    <a id="phone-1" href="tel:9766822460">9766822460</a>
                    <span color="black" class="separator">|</span>
                    <a id="phone-2" href="tel:9860702464">9860702464</a>
                </div>
             </div>
+			<div class="separator">|</div>
+			<div class="top-bar-item">
+
+			</div>
+			</div>
          </div>
       </header>
       <div class="header-top">
@@ -1198,6 +1258,8 @@ function autoClose() {
             <div class="emergency-banner" id="emergency-banner">
                <i class="fa-solid fa-heart-pulse"></i>
                <span id="emergency-text">24/7 Emergency Services Available - Call: </span>
+			   <a href="tel:+912466 263875">+912466 263875</a>
+			   <span color="black" class="separator">|</span>
                <a href="tel:+91 9766822460">+91 9766822460</a>
             </div>
             <div class="hero">
@@ -1308,7 +1370,7 @@ function autoClose() {
                      <p style="margin-top: 1rem; color: var(--text-light);">
                      <li id="ourdoctors-t1-ap">Ganesh Hospital, Ahmedpur</li>
                      <li id="ourdoctors-t2-ap">🧑‍⚕️ Doctor's Visit Schedule:</li>
-					 <a href="tel:+91 9766822460"><p id="ourdoctors-t3-ap">
+					 <a href="tel:+912466 263875"><p id="ourdoctors-t3-ap">
                         Contact us to book an appointment
 						</p>
                      </p></a>
@@ -1330,7 +1392,7 @@ function autoClose() {
                      <p style="margin-top: 1rem; color: var(--text-light);">
                      <li id="ourdoctors-t1-pp">Ganesh Hospital, Ahmedpur</li>
                      <li id="ourdoctors-t2-pp">🧑‍⚕️ Doctor's Visit Schedule:</li>
-					 <a href="tel:+91 9766822460"><p id="ourdoctors-t3-pp">
+					 <a href="tel:+912466 263875"><p id="ourdoctors-t3-pp">
                         Contact us to book an appointment
 						</p>
                      </p></a>
@@ -1419,6 +1481,8 @@ function autoClose() {
 						<strong>General Enquiries:</strong>
 						</div>
 					<div>
+						<a href="tel:+912466 263875">&nbsp;&nbsp;+912466 263875</a>
+						<span color="black" class="separator">|</span>
 						<a href="tel:9766822460">&nbsp;&nbsp;9766822460</a>
 					</div>
 					</div>
@@ -1443,6 +1507,12 @@ function autoClose() {
                      <strong>Emergency: 24/7</strong>
                   </div>
                </div>
+			   <div class="contact-item">
+			   <i class="fa-brands fa-instagram" style="font-size: 20px;"></i>
+					<div>
+					<a href="https://instagram.com/dr_anujagaikhar_md">&nbsp;&nbsp;&nbsp;&nbsp;dr_anujagaikhar_md</a>
+					</div>
+				</div>
 			   </div>
 			   <div class="contact-info">
                <section class="map-container">
@@ -1642,10 +1712,16 @@ function autoClose() {
             </div>
             <div class="footer-column">
                <h3 id="footer-contact-h">📞 Contact Us</h3>
+			   <a href="tel:+912466 263875">📱 +912466 263875</a>
                <a href="tel:+91 9766822460">📱 +91 9766822460</a>
                <a href="tel:+91 9860702464">📱 +91 9860702464</a>
+			   <a href="https://instagram.com/dr_anujagaikhar_md">
+				<i class="fa-brands fa-instagram" style="font-size: 15px;"></i>
+								<span>&nbsp; dr_anujagaikhar_md</span>
+							</a>
                <p style="margin-top: 0.5rem; font-size: 0.9rem;" id="footer-available">Available 24/7 for Emergency</p>
                <a id="footer-book" href="#contact-page" onclick="showPage('contact-page', this)">Book Appointment</a>
+			 
             </div>
             <div class="footer-column">
                <h3>
@@ -1658,6 +1734,7 @@ function autoClose() {
                <a id="full-address" href="https://maps.app.goo.gl/xuHE7mUC5q1RdLna6" target="_blank">			   
                Vithai Hospital & Critical Care Centre,<br> 2282/53, New Sarafa Market, <br> Shivkalyan Nagar, Loha <br> Dist. Nanded 431708
                </a>
+            </div>
             </div>
          </div>
          <div class="footer-bottom" id="copyright">
